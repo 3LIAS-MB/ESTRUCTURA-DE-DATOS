@@ -47,15 +47,16 @@ public class ArrayDinamico { // -> LISTA ALMACENADA EN SECUENCIA
         // Crear un ArrayList de enteros
         ArrayList<Integer> numeros = new ArrayList<>();
         ArrayList<Integer> numeros2 = new ArrayList<Integer>();
+        
+        // En esta línea, estás utilizando la interfaz List como el tipo de referencia para 'numeros3',
+        // pero estás instanciando un objeto de la clase ArrayList. Esto significa que puedes cambiar
+        // fácilmente la implementación subyacente de la lista en el futuro sin cambiar el resto de tu
+        // código. Esto se conoce como programación orientada a interfaces y es una buena práctica de programación.
+
+        // Por ejemplo, si en el futuro decides cambiar a una implementación diferente de lista,
+        // como LinkedList, solo necesitas cambiar la parte derecha de la asignación:
         List<Integer> numeros3 = new ArrayList<Integer>(); // -> Uso como referencia la interfaz List
        
-        //En esta línea, estás utilizando la interfaz List como el tipo de referencia para nombreDeLaLista, pero estás instanciando un objeto
-        //de la clase ArrayList. Esto significa que puedes cambiar fácilmente la implementación subyacente de la lista en el futuro
-        //sin cambiar el resto de tu código. Esto se conoce como programación orientada a interfaces y es una buena práctica de programación.
-
-        // Por ejemplo, si en el futuro decides cambiar a una implementación diferente de lista, como LinkedList, solo necesitas
-        // cambiar la parte derecha de la asignación:
-        
         ArrayList<Object> archivos = new ArrayList<Object>(); // ArrayList de tipo génerico, tiene que parametrizarse
         ArrayList archivos2 = new ArrayList(4); // Esto es un "raw ArrayList" o un ArrayList sin tipo (tipo crudo)
 
@@ -140,17 +141,19 @@ public class ArrayDinamico { // -> LISTA ALMACENADA EN SECUENCIA
 
 // numeros2.ensureCapacity(11); -> CREO DIRECTAMENTE UN ARRAY DE 11 ELEMENTOS PARA METERLOS EN SU INTERIOR, DE ESTA FORMA
 // CUANDO LLEGO AL ELEMENTO 11 EVITO EL CONSUMO DE RECURSO DE CREAR UNA COPIA, EL TRASPASO DE ELEMENTOS Y ELIMINACION
-//listaEmpleados.trimToSize(); -> RECORTA EL ESPACIO SOBRANTE, EL EXCESO DE MEMORIA VA AL FINAL DEL ARRAYLIST
+// listaEmpleados.trimToSize(); -> RECORTA EL ESPACIO SOBRANTE, EL EXCESO DE MEMORIA VA AL FINAL DEL ARRAYLIST
 
 //add(insertar) -> Añade un elemento a el ArrayList. Añade desde el final. Devuelve un booleano indicando el estado de la operacion
-//contains(elemento) -> Verificar si el ArrayList contiene un elemento. Devuelve un valor booleano
-//lista1.equals(lista2) -> Compara si la lista es igual a otro objeto.
+
 //get(elemento) -> Devuelve el elemento en el índice indicado
-//indexOf("elemento") -> Devuelve la primera posición del elemento puesto como parámetro. Devuelve -1 si no esta
-//isEmpty(-) -> Indica si el ArrayList esta o no vacio. Devuelve un valor booleano
-//lastIndexOf("elemento") -> Devuelve el índice de la última ocurrencia del objeto especificado en la lista. Devuelve -1 si no está
 //set(int índice, newElement): Reemplaza el elemento en la posición especificada con el nuevo elemento.
 //size(-) -> Devuelve el tamaño del arraylist. Devuelve la cantidad de elementos en el ArrayList
+//isEmpty(-) -> Indica si el ArrayList esta o no vacio. Devuelve un valor booleano
+//lista1.equals(lista2) -> Compara si la lista es igual a otro objeto.
+//contains(elemento) -> Verificar si el ArrayList contiene un elemento. Devuelve un valor booleano
+
+//indexOf("elemento") -> Devuelve la primera posición del elemento puesto como parámetro. Devuelve -1 si no esta
+//lastIndexOf("elemento") -> Devuelve el índice de la última ocurrencia del objeto especificado en la lista. Devuelve -1 si no está
 //clear-(-) -> Limpia el ArrayList de elementos. No devuelve nada
 
 //lista.remove(0)); -> Elimina el primer elemento en la lista. Devuelve el elemento
@@ -158,7 +161,7 @@ public class ArrayDinamico { // -> LISTA ALMACENADA EN SECUENCIA
 //lista.remove("Manzana"); -> Elimina la primera ocurrencia de "Manzana" en la lista. Devuelve true si lo elimino y false si no
 
 // iterator(-) -> Devuelve un iterador para recorrer el ArrayList. Retorna el iterador
-//toArray(): Convierte la lista en un array.
+// toArray(): Convierte la lista en un array.
 
 // NO IMPORTAN POR AHORA
 

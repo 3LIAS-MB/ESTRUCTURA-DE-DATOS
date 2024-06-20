@@ -16,13 +16,13 @@ public class Jefatura extends Empleado implements Jefes { // Esta es una subclas
         return sueldoJefe + incentivo;
     }
     
-    // Al implementaar la interfaz Jefes obliga a desarrollar el metodo de la interfaz
+    // Al implementar la interfaz Jefes obliga a desarrollar el metodo de la interfaz
 	@Override
 	public String tomarDecisiones(String decicion) {
 		return "Un miembro de la direccion ha tomado la decicion de: " + decicion;
 	}
-	// No es obligatorio sobreescribir el metodo de la superinterfaz o interfaz padre. Sí es obligatorio
-	// definir el metodo de la subinterfaz o interfaz hija
+	// No es obligatorio sobreescribir el metodo de la superinterfaz o interfaz padre.
+	// Sí es obligatorio definir el metodo de la subinterfaz o interfaz hija
 	@Override
 	public double establece_bonus(double gratificacion) {
 		double prima = 2000; // Esto solo lo tienen los jefes

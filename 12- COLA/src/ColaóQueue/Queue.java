@@ -129,7 +129,7 @@ public class Queue<ELEMENT> {
 
      this.data[this.tail] = element;
      //this.tail = (this.tail + 1) % this.data.length;
-     this.tail = this.next(this.tail);
+     this.tail = this.next(this.tail);	
      //++this.tail;
      ++this.count;		
 
@@ -156,8 +156,8 @@ public class Queue<ELEMENT> {
      if (this.empty()) {
          return null;
      }
-     return this.data[this.head]; // devuelve el elemento en laparte frontal sin, eliminarlo
-     							  // devuelve true si lo elimino y null si no
+     return this.data[this.head];
+     							 
  }
  
  // Inserts the specified element into this queue if it is possible to do so

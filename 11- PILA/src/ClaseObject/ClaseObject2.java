@@ -1,5 +1,5 @@
 // El uso de "Object" como tipo de parámetro significa que puedes enviar 
-//  cualquier objecto como argumento sin especificar de qué clase proviene
+// cualquier objecto como argumento sin especificar de qué clase proviene
 
 // Este enfoque puede ser útil en situaciones en las que necesitas trabajar
 // con objetos de diversas clases en un método genérico o cuando deseas crear
@@ -37,7 +37,7 @@ public class ClaseObject2 {
         // Iteración a través del arreglo y uso de instanceof para determinar el tipo
         for (Object obj : objetos) {
             if (obj instanceof String) {
-                System.out.println("\nEs una cadena: " + obj);
+                System.out.println("Es una cadena: " + obj);
             } else if (obj instanceof Integer) {
                 System.out.println("Es un entero: " + obj);
             } else if (obj instanceof Double) {
@@ -50,9 +50,9 @@ public class ClaseObject2 {
     public static void imprimirInfoObjeto(Object objeto) {
     	
     	System.out.println("getClass: " + objeto.getClass()); // referencia al objeto -> class java.lang.String
-
-        System.out.println("\nTipo de objeto: " + objeto.getClass().getSimpleName()); // Tipo de objeto, string, int, char, log, etc
+        System.out.println("Tipo de objeto: " + objeto.getClass().getSimpleName()); // Tipo de objeto, string, int, char, log, etc
         System.out.println("Valor del objeto: " + objeto); // Valor -> Hola, soy una cadena
+        System.out.println("-");
     }
 }
 

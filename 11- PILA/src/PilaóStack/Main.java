@@ -54,7 +54,7 @@ public class Main {
                 case 6:
                     System.out.print("Ingrese el elemento a buscar: ");
                     int searchElement = scanner.nextInt();
-                    int position = stack.search(searchElement);
+                    int position = stack.search2(searchElement);
                     if (position != -1) {
                         System.out.println("Elemento encontrado en la posición " + position + " desde la cima.");
                     } else {

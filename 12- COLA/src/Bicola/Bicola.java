@@ -93,14 +93,14 @@ public class Bicola {
         return pos;
     }
 
-    private int prev(int position) {
+    private int prev(int position) {		
         if (--position < 0) {
             position = arreglo.length - 1;
         }
         return position;
     }
 
-    public void insertarAlFrente(int elemento) {
+    public void insertarAlFinal(int elemento) {
         if (!estaLlena()) {
             head = prev(head);
             arreglo[head] = elemento;
@@ -109,18 +109,8 @@ public class Bicola {
             System.out.println("La bicola está llena. No se puede insertar al frente.");
         }
     }
-
-    public void insertarAlFinal(int elemento) {
-        if (!estaLlena()) {
-            tail = next(tail);
-            arreglo[tail] = elemento;
-            tamaño++;
-        } else {
-            System.out.println("La bicola está llena. No se puede insertar al final.");
-        }
-    }
-
-    public int eliminarDelFrente() {
+    
+    public int eliminarDelFinal() {
         if (!estaVacia()) {
             int elemento = arreglo[head];
             head = next(head);
@@ -131,8 +121,20 @@ public class Bicola {
             return -1;
         }
     }
-
-    public int eliminarDelFinal() {
+    
+    /**/
+    
+    public void insertarAlFrente(int elemento) {
+        if (!estaLlena()) {
+            tail = next(tail);
+            arreglo[tail] = elemento;
+            tamaño++;
+        } else {
+            System.out.println("La bicola está llena. No se puede insertar al final.");
+        }
+    }
+    
+    public int eliminarDelFrente() {
         if (!estaVacia()) {
             int elemento = arreglo[tail];
             tail = prev(tail);

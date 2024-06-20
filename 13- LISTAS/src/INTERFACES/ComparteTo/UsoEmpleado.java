@@ -40,7 +40,7 @@ public class UsoEmpleado {
         // Se está creando una instancia de la clase Empleado y luego se está almacenando en una 
         // variable de tipo Comparable. Esto demuestra otro aspecto del principio de sustitución
         // La interfaz Comparable es una interfaz genérica que define un método compareTo. Dado
-        // que la clase Empleado implementa la interfaz Comparable, puedes crear una instancia de
+        // que la clase Empleado implementa la interfaz Comparable, puedes crear una instancia de	
         // Empleado y asignarla a una variable de tipo Comparable.
         Comparable<Empleado> ejemplo = new Empleado("Elizabeth", 95000, 2001, 06, 07);
         if(director_comercial instanceof Empleado) { 
@@ -67,7 +67,9 @@ public class UsoEmpleado {
         }
     }
 }
-    
+
+//  Una clase abstracta en Java puede tener tanto métodos abstractos (que no 
+//  tienen implementación) como métodos concretos (que sí tienen implementación).
 abstract class Persona {
 	private String nombre;
 	

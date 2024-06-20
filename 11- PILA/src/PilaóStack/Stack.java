@@ -26,7 +26,7 @@ public class Stack<ELEMENT> {
  private ELEMENT[] data;
  private Integer count;
 
- // Llamada al constructor -> sobrecarga de constructores	z
+ // Llamada al constructor -> sobrecarga de constructores
  // 'this' se refiere a la instancia actual de la clase Stack.
  public Stack() {
      this(Stack.defaulDimension);
@@ -61,13 +61,13 @@ public class Stack<ELEMENT> {
  // Pushes an item onto the top of this stack.
  public ELEMENT push(ELEMENT element) {
      if (this.size() >= this.data.length) {
-         throw new RuntimeException("La pila está llena...");
+        //throw new RuntimeException("La pila está llena...");
 
-         /*ELEMENT [] temp = (ELEMENT []) new Object[this.data.length * 2];
-         for (int i = 0; i < this.data.length; ++i) {
-             temp[i] = this.data[i];
+         ELEMENT [] temp = (ELEMENT []) new Object[this.data.length * 2]; // Creamos un arreglo de tipo genérico (casting), 
+         for (int i = 0; i < this.data.length; ++i) {					    // creamos una nueva instancia de 'Object'.
+             temp[i] = this.data[i];										// Forzamos a convertirse en una matriz de tipo ELEMENT
          }
-         this.data = temp;*/
+         this.data = temp;
      }
      
      this.data[this.count] = element;
@@ -81,7 +81,6 @@ public class Stack<ELEMENT> {
          throw new RuntimeException("La pila está vacía...");
      }
 //     this.data[this.count-1] = null; -> para borrar el elemento
-     
      --this.count;
      return this.data[this.count];
  }
@@ -92,14 +91,24 @@ public class Stack<ELEMENT> {
          throw new RuntimeException("La pila está vacía...");
      }
      return this.data[this.count - 1];
- }
+ } 
 
 
- // Returns the 1-based position where an object is on this stack.
+ // Elemento encontrado comenzando desde la cima
  public int search(Object object) {
      for (int pos = this.count - 1; pos >= 0; --pos) {
          if (this.data[pos].equals(object)) {
              return this.count - pos;
+         }
+     }
+     return -1;
+ }
+ 
+ // Elemento encontrado comenzando desde el final
+ public int search2(Object object) {
+     for (int pos = 0; pos <= this.count - 1; ++pos) {
+         if (this.data[pos].equals(object)) {
+             return pos;
          }
      }
      return -1;
@@ -153,5 +162,4 @@ public class Stack<ELEMENT> {
      sb.append("]");
      return sb.toString();
  }
- //endregion
 }

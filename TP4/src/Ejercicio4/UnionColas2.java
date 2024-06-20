@@ -16,9 +16,9 @@ public class UnionColas2 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         
-        //UnionColas2 xd = new UnionColas2(); Aunque el metodo sea estico igual permite instanciar un objeto y usar sus metodos
-        //Queue<Integer> colaUnin = xd.unirColas(cola1, cola2);
-        
+        // Aunque el metodo sea estico igual permite instanciar un objeto y usar sus metodos
+        UnionColas2 xd = new UnionColas2();
+
         Queue<Integer> cola1 = new LinkedList<>();
         Queue<Integer> cola2 = new LinkedList<>();
 
@@ -56,7 +56,7 @@ public class UnionColas2 {
 
         // Si quedan elementos en alguna de las colas, agregarlos a la colaUnion
         while (!cola1.isEmpty()) {
-            colaUnion.offer(cola1.poll());
+            colaUnion.offer(cola1.poll());	
         }
         while (!cola2.isEmpty()) {
             colaUnion.offer(cola2.poll());

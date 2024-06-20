@@ -3,7 +3,9 @@
 // posición de la lista. Sin embargo, el acceso a elementos por índice puede ser menos eficiente que en los arrays,
 // ya que es necesario recorrer la lista desde el principio o desde el final para encontrar un elemento específico.
 
-// Las LinkedLists son adecuadas cuando se realizan operaciones frecuentes de inserción y eliminación en el medio de la lista.
+// Las LinkedLists son adecuadas cuando se realizan operaciones
+// frecuentes de inserción y eliminación en el medio de la lista.
+// -> LinkedList utiliza una lista doblemente enlazada.
 
 // 1- Estructura de datos subyacente:
 

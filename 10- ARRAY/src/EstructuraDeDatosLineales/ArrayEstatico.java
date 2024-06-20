@@ -21,8 +21,6 @@ public class ArrayEstatico { // -> LISTA ALMACENADA EN SECUENCIA
         int[] numeros3 = {1, 2, 3, 4}; // forma 1 de inicializar un arreglo
 		int[] numeros2 = new int[]{1, 2, 3, 4}; // forma 2 de inicializar un arreglo
 		
-
-
         // Asignar valores a los elementos del array
         numeros[0] = 10;
         numeros[1] = 20;

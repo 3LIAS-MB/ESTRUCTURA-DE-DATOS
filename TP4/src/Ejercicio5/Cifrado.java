@@ -21,6 +21,7 @@ public class Cifrado <T>{
 	}
 	
 	public void decodificar(String mensaje) {
+		
 	}
 }
 

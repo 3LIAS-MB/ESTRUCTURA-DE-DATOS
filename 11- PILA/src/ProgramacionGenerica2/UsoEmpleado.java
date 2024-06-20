@@ -28,8 +28,8 @@ public class UsoEmpleado {
         
         // Crear objetos instando dentro del metodo "add"
         
-		listaEmpleados.add(new Empleado("Ana", 45, 2501)); // Podemos crear previamente el objeto de tipo Empleado que queremos agregar
-		listaEmpleados.add(new Empleado("Eli", 55, 2502)); // o lo instanciamos desde el argumento del metodo "add"
+		listaEmpleados.add(new Empleado("Ana", 45, 2501)); // Podemos crear previamente el objeto de tipo Empleado que queremos 
+		listaEmpleados.add(new Empleado("Eli", 55, 2502)); // agregar o lo instanciamos desde el argumento del metodo "add"
 		listaEmpleados.add(new Empleado("Juan", 65, 2503));
 		listaEmpleados.set(2, new Empleado("Pedro", 15, 2002));
 		
