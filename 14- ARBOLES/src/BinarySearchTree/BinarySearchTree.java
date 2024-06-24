@@ -27,7 +27,6 @@ package BinarySearchTree; // -> "Árbol Binario de Búsqueda"
      if (this.root == null) {
          // Si el árbol está vacío, crea un nuevo nodo
     	 // con el elemento y lo establece como la raíz.
-    	 
          this.root = new BTNode<ELEMENT>(item, null, null);
      } else {
     	 // Se utiliza para la iteración y búsqueda

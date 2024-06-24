@@ -17,7 +17,8 @@ public class Main {
                     "4. Mostrar tamaño (Size)\n" +
                     "5. Vaciar la pila\n" +
                     "6. Verificar si la pila está vacía (IsEmpty)\n" +
-                    "7. Salir"
+                    "7. Mostrar pila" +
+                    "8. Salir"
                 );
 
                 if (opcion == null) {
@@ -67,6 +68,10 @@ public class Main {
                         break;
 
                     case 7:
+                        pila.mostrarPila();
+                        break;
+                        
+                    case 8:
                         JOptionPane.showMessageDialog(null, "Saliendo del programa.");
                         System.exit(0);
                         break;

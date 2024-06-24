@@ -1,4 +1,4 @@
-package YStack;
+package ArrayQueueStack;
 
 import java.util.EmptyStackException;
 

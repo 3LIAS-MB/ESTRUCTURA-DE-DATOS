@@ -1,11 +1,11 @@
-package Arboles; // -> "Árbol Binario de Búsqueda" 
+package zArboles; // -> "Árbol Binario de Búsqueda" 
 
 public class BinarySearchTree<ELEMENT extends Comparable<ELEMENT>> extends BinaryTree<ELEMENT> {
 
  public BinarySearchTree() {
      super();
  }
-
+ 
  public void add(ELEMENT item) {
      if (this.root == null) {
          this.root = new BTNode<ELEMENT>(item, null, null);
@@ -15,7 +15,7 @@ public class BinarySearchTree<ELEMENT extends Comparable<ELEMENT>> extends Binar
          while (temp != null ) {
              prev = temp; 
              if (item.compareTo(temp.item) < 0) {
-                 temp = temp.left; 
+                 temp = temp.left;
              } else {
                  temp = temp.right;
              }
@@ -83,6 +83,7 @@ public class BinarySearchTree<ELEMENT extends Comparable<ELEMENT>> extends Binar
      return save;
  }
 
+ // Existe una alternativa para extraer un nodo con dos descendientes y se conoce 'removeByFusion'
  private ELEMENT removeByFusion(ELEMENT item) {
      BTNode<ELEMENT> find = this.root;
      BTNode<ELEMENT> prev = null;

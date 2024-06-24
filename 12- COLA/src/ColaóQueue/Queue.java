@@ -84,7 +84,7 @@ public class Queue<ELEMENT> {
  private int tail; // Apunta a la posicion donde se va a insetar un elemento
  private int count; // Me dice cuantos elementos tiene la cola
 
- //region Constructors
+ //region Constructors 
 
  public Queue() {
      this(Queue.defaulDimension);

@@ -1,4 +1,4 @@
-package TentorDoubleLinkedList;
+	package TentorDoubleLinkedList;
 
 //
 //Created by Julio Tentor <jtentor@fi.unju.edu.ar>
@@ -73,11 +73,11 @@ public class DoubleLinkedList<ELEMENT> implements ILinkedList<ELEMENT> {
     	 // Si la lista está vacia 'tail' apunta al nuevo nodo
          this.tail = temp;
      } else {
-    	 // Si no, anterior del primer nodo apunta al nuevo nodo
+    	 // Si no, el anterior del primer nodo apunta al nuevo nodo
     	 // pasando este pasa a ser el segundo de la lista
          this.head.prev = temp;
      }
-     // la cabezera (head) siempre apuntará al nuevo nodo,
+     // la cabecera (head) siempre apuntará al nuevo nodo,
      // en este caso, temp por ser el recien creado
      this.head = temp;
      ++this.count;

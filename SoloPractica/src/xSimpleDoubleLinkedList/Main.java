@@ -1,4 +1,4 @@
-package LinkedList;
+package xSimpleDoubleLinkedList;
 
 import java.util.Scanner;
 

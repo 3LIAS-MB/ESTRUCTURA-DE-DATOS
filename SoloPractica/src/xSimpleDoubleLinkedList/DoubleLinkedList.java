@@ -1,4 +1,4 @@
-package LinkedList;
+package xSimpleDoubleLinkedList;
 
 public class DoubleLinkedList<ELEMENT> {
 	 private Node<ELEMENT> head;
@@ -48,8 +48,7 @@ public class DoubleLinkedList<ELEMENT> {
      Node<ELEMENT> temp = new Node<ELEMENT>(item, null, this.tail);
      if (this.size() <= 0) {
          this.head = temp;
-     }
-     else {
+     } else {
          this.tail.next = temp;
      }
      this.tail = temp;

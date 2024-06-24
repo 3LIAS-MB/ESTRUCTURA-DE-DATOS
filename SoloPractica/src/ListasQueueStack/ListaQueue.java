@@ -1,11 +1,10 @@
-package ListaQueue;
+package ListasQueueStack;
 
 public class ListaQueue<ELEMENT> {
 	//private static final Integer defaultDimension = 3;
 	private NodoCola<ELEMENT> head;
 	private NodoCola<ELEMENT> tail;
 	private int count;
-	private int capacity;
 	
 	public class NodoCola<ELEMENT> {
 		private NodoCola<ELEMENT> siguiente;
@@ -21,7 +20,6 @@ public class ListaQueue<ELEMENT> {
 		this.head = null;
 		this.tail = null;
 		this.count = 0;
-		this.capacity = capacity;
 	}
 	
 	public int size() {
@@ -33,19 +31,16 @@ public class ListaQueue<ELEMENT> {
 	}
 	
 	public boolean offer(ELEMENT element) {
-		if(this.size() >= capacity) {
-			return false;
+		NodoCola<ELEMENT> nuevo = new NodoCola<ELEMENT>(element);
+		if(this.empty()) {
+			this.head = nuevo;
 		} else {
-			NodoCola<ELEMENT> nuevo = new NodoCola<ELEMENT>(element);
-			if(this.empty()) {
-				this.head = nuevo;
-			} else {
-				tail.siguiente = nuevo;
-			}
-			this.tail = nuevo; 
-			++this.count;
-			return true;
+			tail.siguiente = nuevo;
 		}
+		this.tail = nuevo; 
+		++this.count;
+		return true;
+		
 	}
 	
 	public ELEMENT poll() {
@@ -54,7 +49,7 @@ public class ListaQueue<ELEMENT> {
 		} else {
 			ELEMENT result = this.head.dato;
 			this.head = head.siguiente;
-			++this.count;
+			--this.count;
 			return result;
 		}
 	}

@@ -1,4 +1,4 @@
-package Arboles;
+package zArboles;
 
 public class Main {
 	public static void main(String[] args) {

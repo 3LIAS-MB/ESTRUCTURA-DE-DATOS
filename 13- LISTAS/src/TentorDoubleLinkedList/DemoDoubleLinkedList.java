@@ -19,7 +19,7 @@ public class DemoDoubleLinkedList {
             System.out.print("Selecciona una opción: ");
             option = scanner.nextInt();
 
-            switch (option) {
+            switch (option) {	
                 case 1:
                     System.out.print("Ingresa un número para agregar al principio: ");
                     int numberToAddFirst = scanner.nextInt();

@@ -1,4 +1,4 @@
-package XQueue;
+package ArrayQueueStack;
 
 import java.util.NoSuchElementException;
 

@@ -37,8 +37,6 @@ public class Cola {
 		} else {
 			tail.siguiente = nuevo;
 		}
-		// Ya sea insertando al principio o al final
-		// el principio (fin) siempre va a ser igual a nueov
 		tail = nuevo;
 		count++;
 	}

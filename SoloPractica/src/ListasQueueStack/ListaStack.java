@@ -1,7 +1,7 @@
-package ListaStack;
+package ListasQueueStack;
 
-public class ListaStack {
-	private NodoCola cima;
+public class ListaStack<ELEMENT> {
+	private NodoCola<ELEMENT> cima; // head
 	private int count;
 	
 	public ListaStack() {
@@ -9,11 +9,11 @@ public class ListaStack {
 		this.count = 0;
 	}
 	
-	public class NodoCola {
-		private NodoCola siguiente;
-		private int dato;
+	public class NodoCola<ELEMENT> {
+		private NodoCola<ELEMENT> siguiente;
+		private ELEMENT dato;
 		
-		public NodoCola(int dato) {
+		public NodoCola(ELEMENT dato) {
 			this.siguiente = null;
 			this.dato = dato;
 		}
@@ -27,26 +27,25 @@ public class ListaStack {
 		return this.count;
 	}
 	
-	public int push(int element) {
-		NodoCola nuevo = new NodoCola(element);
+	public void push(ELEMENT element) {
+		NodoCola<ELEMENT> nuevo = new NodoCola<ELEMENT>(element);
 		nuevo.siguiente = cima;
 		cima = nuevo;
 		++this.count;
-		return element;
 	}
 	
-	public int pop() {
+	public ELEMENT pop() {
 		if(this.empty()) {
 			throw new RuntimeException("La pila està vacia");
 		} else {
-			int aux = cima.dato;
+			ELEMENT aux = cima.dato;
 			cima = cima.siguiente;
 			--this.count;
 			return aux;
 		}
 	}
 	
-	public int peek() {
+	public ELEMENT peek() {
 		if(this.empty()) {
 			throw new RuntimeException("La pila està vacia");
 		} else {

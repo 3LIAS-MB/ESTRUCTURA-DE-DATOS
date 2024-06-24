@@ -17,7 +17,7 @@ debe estar en el rango {-1, 0, 1}.*/
 // ser comparables para que el árbol pueda mantenerse equilibrado.
 
 // Implementa un árbol AVL (Árbol de Búsqueda Binario Equilibrado)
-package Arboles;
+package zArboles;
 
 public class AVLTree<ELEMENT extends Comparable<ELEMENT>> { 
     protected AVLNode<ELEMENT> root;

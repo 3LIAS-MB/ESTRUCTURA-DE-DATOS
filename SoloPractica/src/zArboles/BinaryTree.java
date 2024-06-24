@@ -1,25 +1,9 @@
-	package Arboles;
+	package zArboles;
 
 public class BinaryTree<ELEMENT> {
 	protected BTNode<ELEMENT> root;
 	
-	public BinaryTree() {
-		this.root = null;
-	}
-	public BinaryTree(ELEMENT item) {
-		this(item, null, null);
-	}
-	public BinaryTree(ELEMENT item, BinaryTree<ELEMENT> left, BinaryTree<ELEMENT> right) {
-		this.root = new BTNode<ELEMENT>(item, null, null);
-		
-		if(left != null) {
-			this.root.left = left.root;
-		}
-		if(right != null) {
-			this.root.right = right.root;
-		}
-	}
-
+	// Clase interna
 	protected class BTNode<ELEMENT> {
 		public ELEMENT item;
 		public BTNode<ELEMENT> left;
@@ -49,6 +33,24 @@ public class BinaryTree<ELEMENT> {
 		}
 	}
 	
+	// Constructor de la clase
+	public BinaryTree() {
+		this.root = null;
+	}
+	public BinaryTree(ELEMENT item) {
+		this(item, null, null);
+	}
+	public BinaryTree(ELEMENT item, BinaryTree<ELEMENT> left, BinaryTree<ELEMENT> right) {
+		this.root = new BTNode<ELEMENT>(item, null, null);
+		
+		if(left != null) {
+			this.root.left = left.root;
+		}
+		if(right != null) {
+			this.root.right = right.root;
+		}
+	}
+
 	public void PreOrder() {
 		PreOrder(this.root);
 	}

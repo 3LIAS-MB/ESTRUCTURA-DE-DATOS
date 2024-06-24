@@ -37,10 +37,11 @@ public class LIFOExample {
 
 // LIFO - "Last-In, First-Out". "Último en Entrar, Primero en Salir".
 
-//push(elemento): Agrega un elemento en la parte superior de la pila. Puede generar una excepcion si la pila es nula 'NullPointerException';
-//o si intentamos agregar elementos que excedan la memoria 'OutOfMemoryError' 
-//pop(): Elimina y devuelve el elemento en la parte superior de la pila. Si la pila está vacia genera una excepcion 'EmptyStackException'
-//peek(): Devuelve el elemento en la parte superior de la pila sin eliminarlo. Devuelve 'null' si esta vacia
+// -> push(elemento): Agrega un elemento en la parte superior de la pila. Puede generar una excepcion si la pila es
+//nula 'NullPointerException'; o si intentamos agregar elementos que excedan la memoria 'OutOfMemoryError' 
+// -> pop(): Elimina y devuelve el elemento en la parte superior de la pila.
+//Si la pila está vacia genera una excepcion 'EmptyStackException'
+// -> peek(): Devuelve el elemento en la parte superior de la pila sin eliminarlo. Devuelve 'null' si esta vacia
 
 //isEmpty(): Verifica si la colección está vacía. -> Devuelve booleano
 //size(): Devuelve el número de elementos en la colección. El tamaño REAL de la pila [1, 2, 3] -> devuelve 3

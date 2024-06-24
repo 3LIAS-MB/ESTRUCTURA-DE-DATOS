@@ -1,11 +1,11 @@
 package StackListaEnlazada; // En el TP5 tengo la pila generica
 
 public class Pila {
-	private NodoPila cima;
+	private NodoPila head;
 	int count;
 	
 	public Pila() {
-		this.cima = null;
+		this.head = null;
 		this.count = 0;
 	}
 	
@@ -22,7 +22,7 @@ public class Pila {
 	
 	// Metodo para saber cuando la pila está vacia
 	public boolean empty() {
-		return cima == null;
+		return head == null;
 	}
 	
 	// Metodo para saber el tamaño de la pìla (size)
@@ -33,8 +33,8 @@ public class Pila {
 	// Metodo para apilar (push) un elemento en la Pila
 	public int push(int element) {
 		NodoPila nuevo = new NodoPila(element);
-		nuevo.siguiente = cima;
-		cima = nuevo;
+		nuevo.siguiente = head;
+		head = nuevo;
 		count++;
 		return element;
 	}
@@ -44,8 +44,8 @@ public class Pila {
 		if(this.count <= 0) {
 			throw new RuntimeException("La pila está vacia");
 		}
-		int auxiliar = cima.dato;
-		cima = cima.siguiente;
+		int auxiliar = head.dato;
+		head = head.siguiente;
 		count--;
 		return auxiliar;
 	}
@@ -55,7 +55,7 @@ public class Pila {
 		if(this.count <= 0) {
 			throw new RuntimeException("La pila está vacia");
 		}
-		return cima.dato;
+		return head.dato;
 	}
 	
 	// Metodo para vaciar la pila
@@ -64,4 +64,26 @@ public class Pila {
 			this.pop();
 		}
 	}
+	
+    public void mostrarPila() {
+        if (empty()) {
+            System.out.println("La pila está vacía");
+            return;
+        }
+
+        NodoPila actual = head;
+        StringBuilder sb = new StringBuilder();
+        sb.append("Cima -> ");
+
+        while (actual != null) {
+            sb.append(actual.dato);
+            if (actual.siguiente != null) {
+                sb.append(" -> ");
+            }
+            actual = actual.siguiente;
+        }
+        sb.append(" -> Fondo");
+
+        System.out.println(sb.toString());
+    }
 }

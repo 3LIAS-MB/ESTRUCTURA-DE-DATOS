@@ -1,4 +1,4 @@
-package LinkedList;
+package xSimpleDoubleLinkedList;
 
 public class SimpleLinkedList<ELEMENT>  {                                           
 		protected Node<ELEMENT> head;									
@@ -44,7 +44,7 @@ public class SimpleLinkedList<ELEMENT>  {
 
     public void addFirst(ELEMENT item) {
         Node<ELEMENT> temp = new Node<ELEMENT>(item, this.head); // item, next	
-        if (this.count == 0) {
+        if (this.isEmpty()) {
             this.tail = temp;
         }
         this.head = temp;
@@ -53,7 +53,7 @@ public class SimpleLinkedList<ELEMENT>  {
 
     public void addLast(ELEMENT item) {
         Node<ELEMENT> temp = new Node<ELEMENT>(item, null);
-        if (this.count == 0) {
+        if (this.isEmpty()) {
             this.head = temp;
         } else {
             this.tail.next = temp;
@@ -83,7 +83,7 @@ public class SimpleLinkedList<ELEMENT>  {
         if (this.head.next == null) {
             this.head = this.tail = null;
         } else {
-            Node<ELEMENT> skip = this.head;
+            Node<ELEMENT> skip = this.head; // puntero
             while (skip.next.next != null) {
                 skip = skip.next; 
             }
